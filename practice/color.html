@@ -6,23 +6,70 @@
         <meta charset="UTF-8">
         <style>
             div{
-                height:60%;
-                width:50%;
+                width:45%;
                 text-align: center;
-                background-color: rgba(0, 255, 255, 0.171);
                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #analogous{
+                color:rgb(0, 36, 154);
+                background-color: rgba(94, 208, 246, 0.541)
+            }
+            #complementary{
+                color:rgb(32, 121, 209);
+                background-color:rgba(246, 165, 94, 0.541)
+            }
+            #triadic{
+                color:rgb(143, 13, 13);
+                background-color: rgba(213, 187, 17, 0.541);
+            }
+            .paragraph{
+                font-size: 15px;
+                text-align:left;
+                color:rgb(8, 96, 227);
+                border:solid 6px rgba(178, 254, 255, 0.716);
+                background-color: rgba(241, 254, 255, 0.716);
+                border-radius:22px ;
+                
+            }
+            h2{
+                text-decoration: underline wavy rgba(8, 96, 227, 0.789);
             }
         </style>
     </head>
     <body>
         <div id="analogous">
-            <p>p</p>
+            <br>
+            <h2><em>Analogous</em></h2>
+            <br>
+            <p class="paragraph">Analogous color palettes set themselves apart from other options because--
+                unlike complementary and triadic-- the colors are all very close to eachother
+                on the color wheel. An analogous color palette is where you take the colors
+                surrounding the base color, which forms a sort of gradient.<br> 
+            </p>
+            <img href="https://upload.wikimedia.org/wikipedia/commons/7/78/ART_ANALOGOUS_COLOR.png"
+                alt="analogous color palette" width="100px"/>
+            <br>
         </div>
         <div id="complementary">
-            <p>p</p>
+            <h2><em>Complementary</em></h2>
+            <br>
+            <p class="paragraph">Complementary colors are colors that are directly opposite from eachother on the
+                color wheel. They create very good contrast from eachother and can help draw the eye to certain key parts
+                of your site.
+            </p>
+            <img href="https://www.colorsexplained.com/wp-content/uploads/2021/08/complementary-colors-ryb-rgb-color-models.jpg"
+                alt="complementary color palette" width="100px"/>
+                <br>
         </div>
         <div id="triadic">
-            <p>p</p>
+            <h2><em>Triadic</em></h2>
+            <br>
+            <p class="paragraph">Triadic color palettes are when you take three colors from the color wheel that are all equally 
+                far away from one another, which <em>should</em> form a triangle.<br> 
+            </p>
+            <img href="https://i.graphicmama.com/blog/wp-content/uploads/2020/11/27133324/triadic-color-combinations.jpg"
+                alt="triadic color palette" width="100px"/>
+                <br>
         </div>
     </body>
 </html>
