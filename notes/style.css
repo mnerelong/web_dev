@@ -1,0 +1,37 @@
+        img{
+            height: 150px;
+            width: auto;
+            margin:3px;
+        }
+        p{
+            font-family: cursive;
+        }
+        h1{
+            font-family: "Jacquard 24";
+            font-weight: 200;
+            color: brown;
+        }
+        #left{
+            width: 50vw;
+            margin-right: 3px;
+            color: rgb(0, 0, 255);
+            font-weight: bolder;
+            font-variant: small-caps;
+        }
+        #right{
+            width: 50vw;
+            margin-left: 3px
+        }
+        #content-wrapper{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        button{
+            margin:50px;
+            padding:50px;
+        }
+        #one-wrapper{
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
