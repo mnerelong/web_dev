@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hidden{
+            display: none;
+        }
+        button{
+            background-color: white;
+            border-color: white;
+            padding: 10px;
+            color:orange;
+            font-weight:bolder;
+            font-family:'Times New Roman', Times, serif;
+        }
+        img{
+            width:100px;
+            height:200px;
+        }
+    </style>
+    <script>
+function show(){
+    if(document.getElementById("hidden").style.display == "none"){
+    document.getElementById("hidden").style.display = "block"
+    document.getElementById("button").innerHTML = "Close Collection"
+    document.getElementById("button").style.backgroundColor = document.getElementById("usercolor").value
+    document.getElementById("button").style.color = "white"
+    alert("You showed the thing.")
+}else{
+    document.getElementById("hidden").style.display = "none"
+    document.getElementById("button").innerHTML = "Open Collection"
+    document.getElementById("button").style.backgroundColor = "white"
+    document.getElementById("button").style.color = document.getElementById("usercolor").value
+    alert("You've hidden the thing.")
+} }
+images = ["https://static.wikitide.net/rainworldwiki/thumb/3/3d/Inv_select_screen_layer.png/181px-Inv_select_screen_layer.png", "https://static.wikitide.net/rainworldwiki/3/37/Monk_select_screen_layer.png", ]
+index = 0
+function change(){
+    document.getElementById("monkimg").src = images[index]
+    index += 1
+    if(index >= images.length){
+        index = 0
+    }
+}
+function basic(){
+    document.getElementById("hidden").style.color = "black"
+}
+    </script>
+</head>
+<body>
+    <input type="color" id="usercolor">
+    <button onclick={show()} onmouseover={basic()} id="button">Open Collection</button>
+    <div id="hidden">
+    <p>The Collection Menu is an additional tab on the main menu that records and allows the player to view the
+         contents of Colored Pearls that have been transcribed within Story or Expedition Mode, in addition to
+          the collectible Broadcasts within  Spearmaster's campaign. The interface consists of a vertical 5 by
+           13 grid of buttons on the left side, for a total of 65 entries (30 unique Pearls and 35 Broadcasts).
+            Each entry is initially undiscovered and blanked out with a question mark, and once discovered,
+             becomes interactable buttons labeled with a colored icon of the respective Pearl / Broadcast. 
+             On the right is a readout of the currently selected entry, which displays "[ Collection Empty ]"
+              when none are selected.</p>
+              </div>
+    <img id="monkimg" src="https://static.wikitide.net/rainworldwiki/3/37/Monk_select_screen_layer.png" alt="monk" onmouseover={change()}>
+</body>
+</html>
+<!--"document" gives access to html
+document.getElementById()
+            ^ gets us the specific thing we want
+            
+What is the purpose of JavaScript in web development?
+    To add interactive elements to your website & make it more functional.
+
+
+How do you access HTML elements with JavaScript?
+    document.getElementById()
+
+What are the mouse events you have access to in HTML?
+onclick - clicked on
+oncontextmenu - right clicked 
+ondblclick - double clicked
+onmousedown - mouse is pressed over an elements
+onmouseenter - the mouse moves into an image
+onmouseleave - the mouse poinyrt moves out of an image
+onmouseout - the mouse moves oit of an elements
+onmouseover - the mouse moves over an elements
+onmouseup - the mouse is released over an element
+
+
+How can you change CSS using JavaScript?
+    By accessing the CSS property through the document and using getElementById(). 
+
+How do you create an alert message using JavaScript?
+??????
+-->
