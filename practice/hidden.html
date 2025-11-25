@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Image</title>
+    <style>
+        img{
+            height:150px;
+        }
+        #whole{
+            justify-items: center;
+            text-align: center;
+        }
+        .hidden{
+            width: 20px;
+            height: 20px;
+            justify-self: center;
+        }
+        #hiddenimg{
+            display:none;
+        }
+    </style>
+    <script>
+        index = "dad"
+        function change(){
+            if(index == "dad"){
+            document.getElementById("sneaky").src = "https://static.wikitide.net/rainworldwiki/3/36/Mother_sneaky.gif"
+            index = "mom"
+        }else{
+            document.getElementById("sneaky").src = "https://static.wikitide.net/rainworldwiki/archive/f/f4/20240228061743%21Daddy_sneaky.gif"
+            index = "dad"
+        }}
+        function precycle(){
+            document.getElementById("hiddenimg").style.display = "block"
+        }
+    </script>
+</head>
+<body>
+    <div class="hidden" onmouseover={precycle()}>
+<img id="hiddenimg" src="https://static.wikitide.net/rainworldwiki/7/79/Roomfloodwakeup.gif" alt="Shelter Failure">
+</div>
+    <div id="whole">
+    <h1>Things in Rain World that scare me</h1>
+<p><strong>The Gourmand</strong><br>You can barely move as this guy. There's some amazing gimmicks revolving around combat (and rolling is infinitely better too) but even jumping
+too much causes the Gourmand to run out of breath and slow down A LOT. I mean... It was already super slow in the first place but now it's just GAME OVER. If you're running
+from a lizard or something and jumping around out of fear then you are definitely not making it through the cycle.</p>
+<img src="https://static.wikitide.net/rainworldwiki/a/a6/Gourmand_spear_comparison.gif" alt="Gourmand being evil">
+<br>
+<p><strong>Daddy Long Legs</strong> (& friends)<br>They just block exits, that's it. I'm trying to get to Five Pebbles? It's in the tunnel I need to go through.
+I need to go <em>up</em> through a chamber that switches between regular gravity and zero gravity while I can't see whats above me and I can't just
+stop moving when theres zero gravity so I just keep going until I hit something? I hit a daddy long legs, pass through it's legs so that it detects me,
+and it snatches me out of the air and eats me, no way to avoid it, even if I have a spear.</p>
+<img id="sneaky" src="https://static.wikitide.net/rainworldwiki/archive/f/f4/20240228061743%21Daddy_sneaky.gif" alt="Daddy long legs being evil" onmouseover={change()}>
+<p><strong>Submerged Superstructure</strong><br>Reasons NOT to go:</p>
+<ol>
+    <li>
+        LOTS OF WATER
+    </li>
+    <li>Drowning</li>
+    <li>Moon doesn't deserve the cloak</li>
+    <li>I've never been there before</li>
+</ol>
+
+<p>Reasons to ACTUALLY go:</p>
+<ol>
+    <li>Cloak</li>
+</ol>
+<p>DONT GO</p>
+</div>
+</body>
+</html>
