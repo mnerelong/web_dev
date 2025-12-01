@@ -11,7 +11,7 @@
         img{
             height:150px;
             width: fit-content;
-            justify-self: center;
+            justify-items: center;
         }
         body{
             background-color: rgb(15, 11, 25);
@@ -22,7 +22,7 @@
             font-family: Courier, monospace;
             text-align: center;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center;
             margin: 5%;
         }
         #head{
@@ -48,7 +48,32 @@
             color: rgb(85, 77, 152);
             font-family: "Grandstander";
         }
+        #para{
+            display:none;
+        }
+        #slug{
+            display:none;
+        }
+        #thebutton{
+            align-self:center;
+            height:fit-content;
+            width:fit-content;
+            padding:10px;
+        }
     </style>
+    <script>
+        function clicked(){
+            check = 0
+            if(check == 0){
+                document.getElementById("para").style.display = "block"
+                document.getElementById("slug").style.display = "block"
+                check = 1
+            }
+        }
+        function change(){
+            document.getElementById("slug").src = "https://64.media.tumblr.com/895d2c195eae191d5678ba3a7de066bb/8b3f948f9aaf4955-23/s640x960/990f456bdcff12a517a52952e0a5ef37db1f941c.gif"
+        }
+    </script>
 </head>
 <body>
     <div class="whole">
@@ -114,6 +139,10 @@
                 (up or down) like seen in backflips. Whiplash can be entered in several different ways. Whiplash is only possible while the slugcat
                 is in the air (or at least mostly in the air), otherwise it will be canceled. A list is provided below of ways to trigger whiplash.
             </p>
+            <button id="thebutton" onclick={clicked()}>Rain</button>
+            <p id="para">The Rain can and will kill you.</p>
+            <img onmouseover={change()} id="slug" src="https://images.steamusercontent.com/ugc/2431451773868177432/4C9B81117FF54EA0C9E12B4D73899484A8CD7F0B/"
+            alt="definitely rain">
 
 </div>
 </body>
