@@ -14,7 +14,7 @@ def rain():
 
 @app.route("/<name>")
 def user(name):
-    return f"<p>Go away, {name}!!</p>"
+    return render_template("user.html")
 
 if __name__ == "__main__": #checking to see if the code is being run on a file called main for it to work.
     app.run(debug=True) #running our app [webpage] and lets it refresh every time we make changes rather than us having to kill it and running it.

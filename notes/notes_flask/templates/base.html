@@ -1,0 +1,32 @@
+<!--MM 6th-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block content %}{% endblock %}</title> <!--Basically a placeholer for information given later.-->
+    <style>
+        body{
+            justify-content: center;
+            text-align: center;
+        }
+        img{
+            width: 150px;
+        }
+        #bar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="bar">
+        <h2><em>Flask</em> time</h2><br>
+        <a href="/">Home?</a> <p> | </p>
+        <a href="/rain">Rain</a> <p> | </p>
+        <a href="/Five">Five</a> <p> | </p>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

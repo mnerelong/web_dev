@@ -1,21 +1,7 @@
 <!--MM 6th-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malice Mizer</title>
-    <style>
-        body{
-            justify-content: center;
-            text-align: center;
-        }
-        img{
-            width: 150px;
-        }
-    </style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}Website | User{% endblock %}
+{% block body %}
     <h1>Website time</h1>
     <form method="POST">
         <label for="name" 
@@ -24,5 +10,4 @@
         <input type="submit" value="DONT submit">
     </form>
 <img src="https://www.splashsummit.com/wp-content/uploads/2020/02/Splash-Summit-Logo-FULL-01.png" alt="a band probably"/>
-</body>
-</html>
+{% endblock %}
