@@ -31,6 +31,11 @@
         a{
             color:orangered;
         }
+        p{
+            color: rgb(13, 0, 126);
+            align-self: center;
+
+        }
         #official{
             border-radius: 70px;
             border-style: solid;
@@ -43,8 +48,19 @@
             padding:10px;
             text-align: center;
             align-self: center;
+            color: blue;
+        }
+        #ot{
+            color: blue;
+            align-self: center;
         }
     </style>
+    <script>
+        function change(){
+            document.getElementById("hidden").style.display = "block"
+            document.getElementById("hidden").innerHTML = ""
+        }
+    </script>
 </head>
 <body>
     <div id="header">
@@ -52,8 +68,15 @@
     <h4><em>Perfect for summer, perfect for family.</em></h4>
     </div>
     <div id="official">
-        <p>Link to the <a href="http://splashsummit.com/" target="_blank">official website</a>.</p>
+        <p id="ot">Link to the <a href="http://splashsummit.com/" target="_blank">official website</a>.</p>
     </div>
-    
+    <br>
+    <div id="sum">
+    <p>Splash Summit features countless activities to partake in, perfect for a summer staycation.
+        The park itself contains play areas and interesting pools to enjoy with your friends.
+        There's never a dull moment in the clear water of Splash Summit! <br> The park also has a plethora of exciting water slides that are sure
+        make your summer! 
+    </p>
+    </div>
 </body>
 </html>
