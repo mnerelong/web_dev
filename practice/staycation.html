@@ -54,11 +54,50 @@
             color: blue;
             align-self: center;
         }
+        #sum{
+            display: flex;
+            width:50%;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-self: center;
+            justify-self: center;
+
+        }
+        #reasons{
+            align-self: center;
+            align-items: center;
+            display: none;
+        }
+        #imageone{
+            opacity: 0.7;
+            margin-top: 20px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+        }
+        #imagetwo{
+            opacity: 0.7;
+            margin-top: 30px;
+            height: 300px;
+            object-fit: cover;
+            object-position: left;
+        }
+
     </style>
     <script>
         function change(){
-            document.getElementById("hidden").style.display = "block"
-            document.getElementById("hidden").innerHTML = ""
+            if(document.getElementById("reasons").style.display == "none"){
+                document.getElementById("reasons").style.display = "block"
+                document.getElementById("unhide").innerHTML = "You should come."
+            } else {
+                document.getElementById("reasons").style.display = "none"
+                document.getElementById("unhide").innerHTML = "Reasons to come"
+            }
+            
+        }
+        function hover(){
+            document.getElementById("hoverimg").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzkDnyXQUZvndEEbU11fAqS7AXtontSc_J5Q&s"
         }
     </script>
 </head>
@@ -67,6 +106,7 @@
     <h1>Splash Summit</h1>
     <h4><em>Perfect for summer, perfect for family.</em></h4>
     </div>
+    <img id="imageone" src="https://coupons4utah.com/wp-content/uploads/2020/04/splash-summit-550x292.jpg" alt="people on a slide at splash summit"/>
     <div id="official">
         <p id="ot">Link to the <a href="http://splashsummit.com/" target="_blank">official website</a>.</p>
     </div>
@@ -75,8 +115,21 @@
     <p>Splash Summit features countless activities to partake in, perfect for a summer staycation.
         The park itself contains play areas and interesting pools to enjoy with your friends.
         There's never a dull moment in the clear water of Splash Summit! <br> The park also has a plethora of exciting water slides that are sure
-        make your summer! 
+        make your summer!
     </p>
+    <button id="unhide" onclick={change()}>Reasons to come</button>
+<div id="reasons">
+    <ol>
+        <li>Play pools</li>
+        <li>Water Slides</li>
+        <li>Lazy rivers</li>
+        <li>Wave pools</li>
+    </ol>
+    <p>Splash summit is awesome!</p>
+    <img id="hoverimg" onmouseover={hover()} src="https://themommyavenger.com/wp-content/uploads/2023/05/splash-.jpeg?w=723">
     </div>
+    </div>
+    <img id="imagetwo" src="https://www.abc4.com/wp-content/uploads/sites/4/2023/05/splash-summit.jpg?w=1280" alt="splash summit"/>
+    <img id="imagetwo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqVumJQvVZdYnq2tikGTGg4QY9HpRWHuNoQ&s" alt="a slide at splash summit"/>
 </body>
 </html>
